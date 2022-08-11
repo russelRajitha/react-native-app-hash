@@ -15,6 +15,6 @@ const AppHash = NativeModules.AppHash  ? NativeModules.AppHash  : new Proxy(
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AppHash.multiply(a, b);
+export function getAppHash(): Promise<string> {
+  return AppHash.getAppHash();
 }
